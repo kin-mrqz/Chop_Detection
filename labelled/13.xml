@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Sample</folder>
+	<filename>13.jpg</filename>
+	<path>C:\Users\User\Desktop\Uni\Career\KyAssignment\Sample\13.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1032</width>
+		<height>598</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Round chop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>679</xmin>
+			<ymin>175</ymin>
+			<xmax>897</xmax>
+			<ymax>397</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Round chop</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>134</xmin>
+			<ymin>295</ymin>
+			<xmax>195</xmax>
+			<ymax>359</ymax>
+		</bndbox>
+	</object>
+</annotation>
