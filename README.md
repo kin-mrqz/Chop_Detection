@@ -61,17 +61,17 @@ Install required Python packages:
 
 ```bash
 pip install -r requirements.txt
+```
 You can generate the requirements.txt using:
 
-bash
-Copy
-Edit
+```bash
 pip freeze > requirements.txt
+```
 Running the App
-bash
-Copy
-Edit
+```bash
 python app.py
+```
+
 Then go to http://localhost:5000 in your browser.
 
 Notes
