@@ -22,8 +22,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Create the directory if it doesn't 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load the trained machine learning model
-model_path = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\chop-detection-system\chop_detection_model.h5" #replace with path to detection model
-classification_model_path = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\chop-detection-system\my_trained_model.h5" #replace with path to classification model
+model_path = "chop_detection_model.h5" #replace with path to detection model
+classification_model_path = "chop_classification_model.h5" #replace with path to classification model
 
 # Define custom objects. Needed for the model to be loaded
 custom_objects = {
@@ -63,8 +63,6 @@ def insert_chop(label, features):
     conn.commit()
     conn.close()
 
-# Image processing
-# Image processing
 # Image processing
 def process_image(file_path):
     try:

@@ -46,9 +46,9 @@ def process_directory(image_dir, xml_dir, output_csv_path):
                 print(f"Processed {filename} with annotations: {annotations}")
 
 # Directory paths setup
-image_directory = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\Processed" # replace with path to preprocessed images in YCbCr binarized formm
-xml_directory = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\labelled" # path to labelled annotations (used labelImg) provided
-output_csv_file = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\annotations.csv"
+image_directory = "processed" # replace with path to preprocessed images in YCbCr binarized formm
+xml_directory = "labelled" # path to labelled annotations (used labelImg) provided
+output_csv_file = "annotations.csv"
 
 # Run the processing function
 process_directory(image_directory, xml_directory, output_csv_file)

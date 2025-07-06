@@ -2,6 +2,7 @@ import os
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+
 def load_and_convert_image(image_path):
     # Read the image in color mode
     image = cv2.imread(image_path, cv2.IMREAD_COLOR)
@@ -9,6 +10,7 @@ def load_and_convert_image(image_path):
         raise FileNotFoundError(f"Image not found or unable to read: {image_path}")
     # Convert the image from BGR to YCrCb color space
     return cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
+
 def binarize_components(image_ycbcr):
     # Split the image into Y, Cb, and Cr components
     Y, Cb, Cr = cv2.split(image_ycbcr)
@@ -16,6 +18,7 @@ def binarize_components(image_ycbcr):
     binary_Cb = cv2.adaptiveThreshold(Cb, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2)
     binary_Cr = cv2.adaptiveThreshold(Cr, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
     return binary_Cb, binary_Cr
+
 def combine_binarized_components(binary_Cb, binary_Cr):
     # Analyze the average values to decide on combining method
     avg_Cb = np.mean(binary_Cb)
@@ -27,6 +30,7 @@ def combine_binarized_components(binary_Cb, binary_Cr):
         else:
             return np.maximum(binary_Cb, binary_Cr)
     return cv2.bitwise_or(binary_Cb, binary_Cr)
+
 def display_images(original, binary_Cb, binary_Cr, combined_binary):
     # Convert the original image to RGB for displaying
     original_rgb = cv2.cvtColor(original, cv2.COLOR_BGR2RGB)
@@ -37,6 +41,7 @@ def display_images(original, binary_Cb, binary_Cr, combined_binary):
     plt.subplot(224), plt.imshow(combined_binary, cmap='gray'), plt.title('Combined Binarized Components'), plt.axis('off')
     plt.tight_layout()
     plt.show()
+
 def process_and_save_images(source_directory, target_directory):
     # Ensure target directory exists
     os.makedirs(target_directory, exist_ok=True)
@@ -53,6 +58,6 @@ def process_and_save_images(source_directory, target_directory):
             print(f"Error processing {filename}: {e}")
 
 if __name__ == "__main__":
-    source_dir = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\Sample"
-    target_dir = r"C:\Users\User\Desktop\Uni\Career\KyAssignment\Processed"
+    source_dir = "sample"
+    target_dir = "processed"
     process_and_save_images(source_dir, target_dir)
