@@ -6,7 +6,22 @@ This repository contains a full pipeline for detecting and classifying **stamps/
 
 ## Directory Structure
 
-<pre> ```plaintext Chop_Detection/ ├── app.py # Flask app: serves UI, handles uploads, runs predictions ├── main.py # Core pipeline: preprocessing, detection, classification ├── chop_detection_model.py # Script for training the chop localization model ├── chop_classification_model.py # Script for training the chop classification model ├── pair_images_annotations.py # Pairs processed images with labels, outputs annotations.csv ├── preprocess_test.py # Testing preprocessing from Sample → Labelled ├── Annotations.csv # CSV with label type and bounding box annotations ├── chops.db # SQLite database of processed chop entries ├── templates/ │ └── index.html # Front-end HTML template for image upload & results ├── Sample/ # Raw document images with chops (downloaded) ├── Processed/ # Preprocessed images (YCbCr conversion, resizing, etc.) ├── Labelled/ # XML label files created using labelImg ``` </pre>
+```plaintext
+Chop_Detection/
+├── app.py                       # Flask app: serves UI, handles uploads, runs predictions
+├── main.py                      # Core pipeline: preprocessing, detection, classification
+├── chop_detection_model.py      # Script for training the chop localization model
+├── chop_classification_model.py # Script for training the chop classification model
+├── pair_images_annotations.py   # Pairs processed images with labels, outputs annotations.csv
+├── preprocess_test.py           # Testing preprocessing from Sample → Labelled
+├── Annotations.csv              # CSV with label type and bounding box annotations
+├── chops.db                     # SQLite database of processed chop entries
+├── templates/
+│   └── index.html               # Front-end HTML template for image upload & results
+├── Sample/                      # Raw document images with chops (downloaded)
+├── Processed/                   # Preprocessed images (YCbCr conversion, resizing, etc.)
+├── Labelled/                    # XML label files created using labelImg
+```
 
 ---
 
