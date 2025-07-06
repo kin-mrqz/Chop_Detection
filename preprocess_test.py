@@ -57,6 +57,7 @@ def process_and_save_images(source_directory, target_directory):
         except Exception as e:
             print(f"Error processing {filename}: {e}")
 
+
 if __name__ == "__main__":
     source_dir = "sample"
     target_dir = "processed"

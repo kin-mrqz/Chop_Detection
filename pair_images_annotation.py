@@ -50,5 +50,6 @@ image_directory = "processed" # replace with path to preprocessed images in YCbC
 xml_directory = "labelled" # path to labelled annotations (used labelImg) provided
 output_csv_file = "annotations.csv"
 
+
 # Run the processing function
 process_directory(image_directory, xml_directory, output_csv_file)

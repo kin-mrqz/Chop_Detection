@@ -8,6 +8,7 @@ from tensorflow.keras.utils import to_categorical
 import cv2
 import numpy as np
 
+
 # Load the data from the CSV file
 data = pd.read_csv("annotations.csv")
 
@@ -97,4 +98,6 @@ print(f'Test loss: {loss:.4f}, Test accuracy: {accuracy:.4f}')
 # Save the model to HDF5 file
 model.save('chop_classification_model.h5')  # This will save the model in the current directory
 
+
 model.summary()
+
